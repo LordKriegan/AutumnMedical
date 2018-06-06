@@ -20,5 +20,27 @@ body {
 /*sticky footer styles*/
 
 html, body {
-  background: #D3CBA2;
+  background: #D5B66D;
+  color: #F2FFFF
+}
+
+.width100 {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.pgBody {
+  border-style: groove;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #E95420;
+}
+
+.headshot {
+  border-radius: 4px;
+}
+
+.slideshowImg {
+  width: 250px !important;
+  height: 250px;
 }

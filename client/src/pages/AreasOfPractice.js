@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import ComponentList from '../components/AreasOfPractice/ComponentList'
+import Page from '../components/Page'
 
 class AreasOfPractice extends Component {
   render() {
+    console.log(ComponentList)
     return (
       <div className="row">
-        <p>AreasOfPractice</p>
+        <Page componentList={ComponentList} />
       </div>
     );
   }
