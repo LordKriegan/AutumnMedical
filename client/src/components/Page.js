@@ -5,7 +5,7 @@ class Page extends Component {
 
     render() {
         const settings = {
-            dots: true,
+            dots: false,
             infinite: true,
             speed: 500,
             slidesToShow: 1,

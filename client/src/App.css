@@ -16,12 +16,14 @@ body {
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
   text-align: center;
+  background-color: #E95420;
 }
 /*sticky footer styles*/
 
 html, body {
-  background: #D5B66D;
-  color: #F2FFFF
+  color: #F2FFFF;
+  background: url(background.jpg) no-repeat center center fixed; 
+  background-size: cover;
 }
 
 .width100 {
@@ -30,7 +32,6 @@ html, body {
 }
 
 .pgBody {
-  border-style: groove;
   padding: 10px;
   border-radius: 4px;
   background-color: #E95420;
@@ -43,4 +44,20 @@ html, body {
 .slideshowImg {
   width: 250px !important;
   height: 250px;
+}
+
+#divMain {
+  padding-bottom: 20px;
+}
+
+#phoneNum {
+  color: #F2FFFF;
+}
+
+.insList {
+  list-style-type: none;
+}
+
+#dirContainer {
+  margin-top: 20px
 }
