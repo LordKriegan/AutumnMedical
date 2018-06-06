@@ -6,7 +6,7 @@ class AboutUs extends Component {
   render() {
     return (
       <div className="row">
-        <Page componentList={ComponentList} />
+        <Page pageTitle="About Us" componentList={ComponentList} />
       </div>
     );
   }

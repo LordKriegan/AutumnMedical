@@ -6,7 +6,7 @@ class TheStaff extends Component {
   render() {
     return (
       <div className="row">
-        <Page componentList={ComponentList} />
+        <Page pageTitle="The Staff" componentList={ComponentList} />
       </div>
     );
   }

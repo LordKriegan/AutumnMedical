@@ -33,7 +33,7 @@ class Page extends Component {
                         {/* dropdown menu */}
                         <div className="dropdown" style={{ width: "100%" }}>
                             <button className="width100 btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                Areas of Practice
+                                {this.props.pageTitle}
                             <span className="caret"></span>
                             </button>
                             <ul className="width100 dropdown-menu" aria-labelledby="dropdownMenu1">

@@ -36,7 +36,6 @@ class ContactForm extends React.Component {
         } else {
             alert("Under Construction!")
         }
-
     }
     
     render() {
@@ -46,28 +45,28 @@ class ContactForm extends React.Component {
                 <hr />
                 <form id="contactForm">
                     {/*name*/}
-                    <div class="form-group">
-                        <label for="nameInp">Name:</label>
-                        <input onChange={this.onChangeHandler} value={this.state.nameInp} type="text" class="form-control" id="nameInp" placeholder="John Doe" />
+                    <div className="form-group">
+                        <label htmlFor="nameInp">Name:</label>
+                        <input onChange={this.onChangeHandler} value={this.state.nameInp} type="text" className="form-control" id="nameInp" placeholder="John Doe" />
                     </div>
                     {/*email*/}
-                    <div class="form-group">
-                        <label for="emailInp">E-mail:</label>
-                        <input onChange={this.onChangeHandler} value={this.state.emailInp} type="email" class="form-control" id="emailInp" placeholder="your@email.com" />
+                    <div className="form-group">
+                        <label htmlFor="emailInp">E-mail:</label>
+                        <input onChange={this.onChangeHandler} value={this.state.emailInp} type="email" className="form-control" id="emailInp" placeholder="your@email.com" />
                     </div>
                     {/*phone number*/}
-                    <div class="form-group">
-                        <label for="phoneNumInp">Phone Number:</label>
-                        <input onChange={this.onChangeHandler} value={this.state.phoneNumInp} type="tel" class="form-control" id="phoneNumInp" placeholder="123-456-7890" />
+                    <div className="form-group">
+                        <label htmlFor="phoneNumInp">Phone Number:</label>
+                        <input onChange={this.onChangeHandler} value={this.state.phoneNumInp} type="tel" className="form-control" id="phoneNumInp" placeholder="123-456-7890" />
                     </div>
                     {/*message*/}
-                    <div class="form-group">
-                        <label for="msgInp">Message:</label>
-                        <textarea style={{ resize: "none" }} onChange={this.onChangeHandler} value={this.state.msgInp} class="form-control" rows="5" id="msgInp" placeholder="Please leave me a message!"></textarea>
+                    <div className="form-group">
+                        <label htmlFor="msgInp">Message:</label>
+                        <textarea style={{ resize: "none" }} onChange={this.onChangeHandler} value={this.state.msgInp} className="form-control" rows="5" id="msgInp" placeholder="Please leave me a message!"></textarea>
                     </div>
-                    <div class="btn-group pull-right" role="group" aria-label="...">
-                        <button onClick={this.submitMsg} type="submit" class="btn btn-info">Submit</button>
-                        <button onClick={this.clearForm} type="button" class="btn btn-danger">Clear</button>
+                    <div className="btn-group pull-right" role="group" aria-label="...">
+                        <button onClick={this.submitMsg} type="submit" className="btn btn-info">Submit</button>
+                        <button onClick={this.clearForm} type="button" className="btn btn-danger">Clear</button>
                     </div>
                 </form>
             </div>
