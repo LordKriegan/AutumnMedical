@@ -3,7 +3,6 @@
 import React, { Component } from 'react';
 import { compose, withProps, lifecycle } from 'recompose';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, DirectionsRenderer } from 'react-google-maps';
-import { Scrollbars } from 'react-custom-scrollbars'
 const mapCenter = { lat: 33.950027, lng: -118.005228 }
 class Directions extends Component {
     state = {
