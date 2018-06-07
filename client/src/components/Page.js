@@ -40,7 +40,7 @@ class Page extends Component {
                                 {
                                     this.props.componentList.map((elem, i) => {
                                         return (
-                                            <li key={i}><a onClick={() => this.slider.slickGoTo(i)}>{elem.title}</a></li>
+                                            <li className="text-center" key={i}><a onClick={() => this.slider.slickGoTo(i)}>{elem.title}</a></li>
                                         )
                                     })
                                 }

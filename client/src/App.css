@@ -16,16 +16,21 @@ body {
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
   text-align: center;
-  background-color: #E95420;
+  background-image: linear-gradient(#54b4eb, #2fa4e7 60%, #1d9ce5);
 }
 /*sticky footer styles*/
 
 html, body {
   color: #F2FFFF;
-  background: url(background.jpg) no-repeat center center fixed; 
-  background-size: cover;
+  background: url(background.png) repeat scroll 0% 0%;
+  font-family: Verdana, Arial, Geneva, Tahoma, sans-serif;
+  font-size: 12pt;
 }
 
+h1, h2, h3, h4 {
+  color: #f2ffff;
+  font-style: italic;
+}
 .width100 {
   width: 100%;
   margin-bottom: 10px;
@@ -34,7 +39,8 @@ html, body {
 .pgBody {
   padding: 10px;
   border-radius: 4px;
-  background-color: #E95420;
+  transition: background-color .3s ease-in;
+  background-image: linear-gradient(#54b4eb, #2fa4e7 60%, #1d9ce5);
 }
 
 .headshot {
@@ -58,6 +64,20 @@ html, body {
   list-style-type: none;
 }
 
-#dirContainer {
-  margin-top: 20px
+#dirList {
+  height: 325px;
+  font-size: 9pt;
+  overflow-y: auto;
+  list-style-type: none;
+  padding-left: 0;
+} 
+
+#dirList > li {
+  border-bottom: solid;
+  border-color: #f2ffff;
+  border-width: 1px;
+}
+
+#dirBtn {
+  margin-top: 5px;
 }

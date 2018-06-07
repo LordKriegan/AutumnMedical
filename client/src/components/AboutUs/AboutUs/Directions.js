@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import { compose, withProps, lifecycle } from 'recompose';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, DirectionsRenderer } from 'react-google-maps';
+import { Scrollbars } from 'react-custom-scrollbars'
 const mapCenter = { lat: 33.950027, lng: -118.005228 }
 class Directions extends Component {
     state = {
@@ -12,7 +13,6 @@ class Directions extends Component {
     getDirs = () => {
         if (navigator && navigator.geolocation) {
             navigator.geolocation.getCurrentPosition((pos) => {
-
                 this.setState({
                     userLoc: {
                         lat: pos.coords.latitude,
@@ -27,7 +27,8 @@ class Directions extends Component {
     showDirs = (dirs) => {
         if (dirs && dirs.directions) {
             let newUl = document.createElement("ul");
-            newUl.classList.add("insList");
+            newUl.id = "dirList";
+            newUl.appendChild(document.createElement("li"));//just to get that inital border showing
             dirs.directions.routes[0].legs[0].steps.forEach((elem, i) => {
                 let newLi = document.createElement("li");
                 newLi.innerHTML = (i + 1) + ". " + elem.instructions;
@@ -94,17 +95,21 @@ class Directions extends Component {
                 );
 
         return (
-            <div>
+            <div style={{height: "410px", paddingTop: "5px"}} className="row">
+                <div className="col-xs-8">
                 <MyMapComponent />
+                </div>
+                <div className="col-xs-4">
                 <div id="dirContainer" className="text-center">
                     <div id="dirBox" style={{height: "100%"}}>
                         
                     </div>
-                    <button className="btn btn-info" onClick={this.getDirs}>Get Directions!</button>
+                    <button id="dirBtn" className="btn btn-info" onClick={this.getDirs}>Get Directions!</button>
+                </div>
                 </div>
             </div>
         );
     }
 }
 
-export default Directions
+export default Directions;

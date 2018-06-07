@@ -62,11 +62,11 @@ class ContactForm extends React.Component {
                     {/*message*/}
                     <div className="form-group">
                         <label htmlFor="msgInp">Message:</label>
-                        <textarea style={{ resize: "none" }} onChange={this.onChangeHandler} value={this.state.msgInp} className="form-control" rows="5" id="msgInp" placeholder="Please leave me a message!"></textarea>
+                        <textarea style={{ resize: "none" }} onChange={this.onChangeHandler} value={this.state.msgInp} className="form-control" rows="5" id="msgInp" placeholder="Please leave us a message!"></textarea>
                     </div>
                     <div className="btn-group pull-right" role="group" aria-label="...">
                         <button onClick={this.submitMsg} type="submit" className="btn btn-info">Submit</button>
-                        <button onClick={this.clearForm} type="button" className="btn btn-danger">Clear</button>
+                        <button onClick={this.clearForm} type="button" className="btn btn-default">Clear</button>
                     </div>
                 </form>
             </div>
