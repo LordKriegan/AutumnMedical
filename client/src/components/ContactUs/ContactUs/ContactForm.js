@@ -41,8 +41,6 @@ class ContactForm extends React.Component {
     render() {
         return (
             <div>
-                <h1 className="text-center">Contact Us!</h1>
-                <hr />
                 <form id="contactForm">
                     {/*name*/}
                     <div className="form-group">

@@ -10,7 +10,8 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import AreasOfPractice from './pages/AreasOfPractice'
 import TheStaff from './pages/TheStaff'
-import AboutUs from './pages/AboutUs'
+import ContactUs from './pages/ContactUs'
+import Directions from './pages/Directions'
 import Err404Page from './pages/Err404Page'
 import './App.css';
 
@@ -25,7 +26,8 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/areasofpractice" component={AreasOfPractice} />
               <Route exact path="/thestaff" component={TheStaff} />
-              <Route exact path="/aboutus" component={AboutUs} />
+              <Route exact path="/directions" component={Directions} />
+              <Route exact path="/contactus" component={ContactUs} />
               <Route component={Err404Page} />
             </Switch>
           </Router>
