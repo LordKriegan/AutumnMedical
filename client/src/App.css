@@ -64,20 +64,21 @@ h1, h2, h3, h4 {
   list-style-type: none;
 }
 
-#dirList {
-  height: 325px;
-  font-size: 9pt;
-  overflow-y: auto;
-  list-style-type: none;
-  padding-left: 0;
-} 
-
-#dirList > li {
-  border-bottom: solid;
-  border-color: #f2ffff;
-  border-width: 1px;
+#dirBox {
+  height: "100%";
+  overflow-y: "scroll" !important;
 }
 
 #dirBtn {
   margin-top: 5px;
+}
+
+.adp-directions {
+  margin: 0 auto;
+}
+
+.navBrandCust {
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
 }

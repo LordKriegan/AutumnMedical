@@ -23,19 +23,6 @@ class Directions extends Component {
             })
         }
     }
-    showDirs = (dirs) => {
-        if (dirs && dirs.directions) {
-            let newUl = document.createElement("ul");
-            newUl.id = "dirList";
-            newUl.appendChild(document.createElement("li"));//just to get that inital border showing
-            dirs.directions.routes[0].legs[0].steps.forEach((elem, i) => {
-                let newLi = document.createElement("li");
-                newLi.innerHTML = (i + 1) + ". " + elem.instructions;
-                newUl.appendChild(newLi);
-            });
-            document.getElementById("dirBox").appendChild(newUl);
-        }
-    }
     render() {
         const mapProps = {
             googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDo8Q4pYGM8Mpba0MsvAs43l_pBM23iRE4",
@@ -44,7 +31,6 @@ class Directions extends Component {
             mapElement: <div style={{ height: `100%` }} />,
         }
         const userLocation = this.state.userLoc;
-        const self = this;
         const MyMapComponent =
             (userLocation) ?
                 compose(
@@ -71,12 +57,12 @@ class Directions extends Component {
                         }
                     })
                 )(props => {
-                    self.showDirs(props);
                     return (<GoogleMap
                         defaultZoom={7}
                         defaultCenter={new google.maps.LatLng(userLocation.lat, userLocation.lng)}
                     >
-                        {props.directions && <DirectionsRenderer directions={props.directions} />}
+                        {props.directions && <DirectionsRenderer directions={props.directions} panel={ document.getElementById('dirBox') }/>}
+                        
                     </GoogleMap>)
                 }
                 ) :
@@ -94,18 +80,15 @@ class Directions extends Component {
                 );
 
         return (
-            <div style={{height: "410px", paddingTop: "5px"}} className="row">
-                <div className="col-xs-8">
-                <MyMapComponent />
-                </div>
-                <div className="col-xs-4">
+            <div style={{height: "100%", paddingTop: "10px"}} className="pgBody">
+                <MyMapComponent /> 
                 <div id="dirContainer" className="text-center">
-                    <div id="dirBox" style={{height: "100%"}}>
+                    <div id="dirBox">
                         
                     </div>
                     <button id="dirBtn" className="btn btn-info" onClick={this.getDirs}>Get Directions!</button>
                 </div>
-                </div>
+                
             </div>
         );
     }

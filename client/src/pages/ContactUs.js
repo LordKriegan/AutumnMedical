@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Page from '../components/Page';
-import ComponentList from '../components/AboutUs/ComponentList';
+import ComponentList from '../components/ContactUs/ComponentList';
 
 class AboutUs extends Component {
   render() {

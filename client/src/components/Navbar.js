@@ -13,14 +13,17 @@ class Navbar extends React.Component {
                                 <span className="icon-bar"></span>
                                 <span className="icon-bar"></span>
                             </button>
-                            <a className="navbar-brand" href="">Autumn Medical</a>
+                            <a className="navbar-brand navBrandCust" href="">
+                            Autumn Medical
+                            </a>
                         </div>
                         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul className="nav navbar-nav navbar-right text-center">
                                 <li><a href="/">Home</a></li>
                                 <li><a href="/areasofpractice">Areas of Practice</a></li>
                                 <li><a href="/thestaff">The Staff</a></li>
-                                <li><a href="/aboutus">About Us</a></li>
+                                <li><a href="/directions">Directions</a></li>
+                                <li><a href="/contactus">Contact Us</a></li> 
                             </ul>
                         </div>
                     </div>
