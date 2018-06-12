@@ -1,12 +1,12 @@
 //dependencies
-const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
-
 //setup dev environment
 if (process.env.NODE_ENV.trim() === "development"){
     require('dotenv').config(); //grab local copy of env var
 }
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
+const fbApiRoutes = require('./routes/api/firebase_crud.js')
 
 //setup server
 const port = process.env.PORT || 3001;
@@ -24,6 +24,8 @@ if (process.env.NODE_ENV === 'production') {
         res.sendFile(path.join(__dirname + '/client/build/index.html'));
     });
 }
+
+app.use("/api", fbApiRoutes);
 
 //start server
 app.listen(port, () => {
