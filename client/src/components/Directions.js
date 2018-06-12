@@ -80,7 +80,7 @@ class Directions extends Component {
                 );
 
         return (
-            <div style={{height: "100%", paddingTop: "10px"}} className="pgBody">
+            <div className="col-xs-12 text-center pgBody">
                 <MyMapComponent /> 
                 <div id="dirContainer" className="text-center">
                     <div id="dirBox">
@@ -88,7 +88,6 @@ class Directions extends Component {
                     </div>
                     <button id="dirBtn" className="btn btn-info" onClick={this.getDirs}>Get Directions!</button>
                 </div>
-                
             </div>
         );
     }

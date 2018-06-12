@@ -1,4 +1,5 @@
 import React from 'react';
+import navTitle from './images/nav-title.png';
 
 class Navbar extends React.Component {
     render() {
@@ -13,7 +14,7 @@ class Navbar extends React.Component {
                                 <span className="icon-bar"></span>
                                 <span className="icon-bar"></span>
                             </button>
-                            <a className="navbar-brand navBrandCust" href="">
+                            <a className="navbar-brand navBrandCust text-hide" style={{background: 'url("'+navTitle+'") center / contain no-repeat'}} href="">
                             Autumn Medical
                             </a>
                         </div>
