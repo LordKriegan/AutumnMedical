@@ -28,13 +28,28 @@ class ContactForm extends React.Component {
 
     submitMsg = (e) => {
         e.preventDefault();
-        if (!(this.state.nameInp) ||
-            !(this.state.emailInp) ||
-            !(this.state.phoneNumInp) ||
-            !(this.state.msgInp)) {
-            alert("Missing Information!")
+        const {nameInp, emailInp, phoneNumInp, msgInp} = this.state;
+        if (nameInp && msgInp && (emailInp || phoneNumInp)) { //scenario: name, msg are filled, either email or phoneNum is filled
+            const newMessage = {
+                name: nameInp,
+                email: emailInp || null,
+                phoneNum: phoneNumInp || null,
+                message: msgInp
+            }
+            axios({
+                method: "POST",
+                url: "/api/messages",
+                data: newMessage
+            })
+            .then((response) => {
+                console.log(response)
+                this.clearForm();
+            })
+            .catch((error) => {
+                console.error(error);
+            })
         } else {
-            alert("Under Construction!")
+            alert("missing information!");
         }
     }
     
