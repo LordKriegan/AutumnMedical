@@ -52,6 +52,7 @@ class Blog extends Component {
                 {/*Paginator*/}
                 <ul class="pager">
                     <li onClick={this.pgPrev} className="previous"><a>Previous</a></li>
+                    <li>Page {this.state.currPage} of {this.state.totalPages}</li>
                     <li onClick={this.pgNext} className="next"><a>Next</a></li>
                 </ul>
             </div>
