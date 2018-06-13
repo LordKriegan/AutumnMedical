@@ -18,10 +18,11 @@ const db = firebase.database();
 router.post("/messages", (req, res) => {
     const newMsg = {
         name: req.body.name,
-        email: req.body.email,
-        phoneNum: req.body.phoneNum,
+        email: req.body.email || null,
+        phoneNum: req.body.phoneNum || null,
         message: req.body.message,
-        read: false
+        read: false,
+        timestamp: firebase.database.ServerValue.TIMESTAMP
     }
     db
         .ref("messages")
@@ -105,7 +106,8 @@ router.delete("/messages/:msgId", (req, res) => {
 router.post("/blog", (req, res) => {
     const newPost = {
         title: req.body.title,
-        body: req.body.body
+        body: req.body.body,
+        timestamp: firebase.database.ServerValue.TIMESTAMP
     }
     db
         .ref("blog")
@@ -148,7 +150,8 @@ router.get("/blog", (req, res) => {
 router.put("/blog", (req, res) => {
     var updatedPost = {
         title: req.body.title,
-        body: req.body.body
+        body: req.body.body,
+        timestamp: firebase.database.ServerValue.TIMESTAMP
     }
     db
         .ref("blog/" + req.body.blogId)

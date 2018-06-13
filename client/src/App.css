@@ -89,3 +89,11 @@ h1, h2, h3, h4 {
   border-bottom-color: #f2ffff;
   border-bottom-width: 1px;
 }
+
+#blogWindow {
+  border-style: groove;
+  border-width: 2px;
+  border-color: #f2ffff;
+  border-radius: 25px;
+  padding: 10px;
+}
