@@ -15,7 +15,7 @@ class Home extends Component {
             .then((response) => {
                 let blogData = [];
                 for (let key in response.data.data) {
-                    blogData.push(response.data.data[key])
+                    blogData.unshift(response.data.data[key])
                 }
                 if (blogData.length > 0) {
                     this.setState({

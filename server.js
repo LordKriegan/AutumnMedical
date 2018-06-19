@@ -6,10 +6,12 @@ if (process.env.NODE_ENV.trim() === "development"){
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+
+
 const fbApiRoutes = require('./routes/api/firebase_crud.js')
 
 //setup server
-const port = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 //Sets up the Express app to handle data parsing
@@ -28,7 +30,8 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 //start server
-app.listen(port, () => {
-     console.log("App listening on PORT " + port);
-});
+
+app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
+})
 
