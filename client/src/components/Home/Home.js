@@ -13,13 +13,9 @@ class Home extends Component {
             url: "/api/blog"
         })
             .then((response) => {
-                let blogData = [];
-                for (let key in response.data.data) {
-                    blogData.unshift(response.data.data[key])
-                }
-                if (blogData.length > 0) {
+                if (response.data.data.length > 0) {
                     this.setState({
-                    blog: blogData
+                    blog: response.data.data
                 });
                 }
             })

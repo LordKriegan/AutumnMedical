@@ -1,14 +1,14 @@
-//dependencies
 //setup dev environment
 if (process.env.NODE_ENV.trim() === "development"){
     require('dotenv').config(); //grab local copy of env var
 }
+//dependencies
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-
-
-const fbApiRoutes = require('./routes/api/firebase_crud.js')
+const db = require('./models');
+const msgCrud = require('./routes/api/messages_crud');
+const blogCrud = require('./routes/api/blogposts_crud');
 
 //setup server
 const PORT = process.env.PORT || 3001;
@@ -20,7 +20,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-app.use("/api", fbApiRoutes);
+app.use("/api", msgCrud);
+app.use("/api", blogCrud);
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname + '/client/build')));
@@ -30,8 +31,12 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 //start server
-
-app.listen(PORT, function () {
-    console.log("App listening on PORT " + PORT);
-})
-
+db.sequelize
+    .sync({ 
+            force: (process.env.NODE_ENV.trim() === 'development')
+        })
+    .then(() => {
+        app.listen(PORT, () => {
+                console.log("App listening on PORT " + PORT);
+            })
+    });
