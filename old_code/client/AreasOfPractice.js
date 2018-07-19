@@ -7,7 +7,7 @@ class AreasOfPractice extends Component {
     console.log(ComponentList)
     return (
       <div className="row">
-        <Page pageTitle="Areas of Practice"componentList={ComponentList} />
+        <Page pageTitle="Areas of Practice" componentList={ComponentList} />
       </div>
     );
   }

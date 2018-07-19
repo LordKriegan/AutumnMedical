@@ -97,3 +97,13 @@ h1, h2, h3, h4 {
   border-radius: 25px;
   padding: 10px;
 }
+
+.btnStuff {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contactInfo {
+  margin-bottom: 25px;
+}

@@ -8,7 +8,6 @@ import Footer from './components/Footer'
 
 //pages
 import Home from './pages/Home'
-import AreasOfPractice from './pages/AreasOfPractice'
 import TheStaff from './pages/TheStaff'
 import ContactUs from './pages/ContactUs'
 import Directions from './pages/Directions'
@@ -24,7 +23,6 @@ class App extends Component {
           <Router>
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/areasofpractice" component={AreasOfPractice} />
               <Route exact path="/thestaff" component={TheStaff} />
               <Route exact path="/directions" component={Directions} />
               <Route exact path="/contactus" component={ContactUs} />

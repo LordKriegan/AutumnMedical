@@ -23,7 +23,7 @@ class Page extends Component {
                             {
                                 this.props.componentList.map((elem, i) => {
                                     return (
-                                        <a key={i} className="btn btn-primary" onClick={() => this.slider.slickGoTo(i)}>{elem.title}</a>
+                                        <a key={i} className="btn btn-primary btnStuff" onClick={() => this.slider.slickGoTo(i)}>{elem.title}</a>
                                     )
                                 })
                             }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import ContactForm from './ContactForm';
 class ContactInfo extends Component {
     render() {
         return (
@@ -26,6 +26,14 @@ class ContactInfo extends Component {
                         <div>
                             <a id="phoneNum" href="tel:1-562-945-2128">(562) 945-2128</a>
                         </div>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-xs-12">
+                        <h3>Leave us a message!</h3>
+                        <hr />
+                        <ContactForm />
                     </div>
                 </div>
             </div>

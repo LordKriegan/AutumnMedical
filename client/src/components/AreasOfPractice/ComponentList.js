@@ -10,6 +10,7 @@ import Geriatrics from './areas/Geriatrics'
 import PrevMeds from './areas/PrevMeds'
 import SkinCare from './areas/SkinCare'
 import AltMeds from './areas/AltMeds'
+import InsuranceInfo from './areas/InsuranceInfo'
 
 export default [
     {
@@ -55,5 +56,9 @@ export default [
     {
         title: "Alternative Medicine",
         component:<AltMeds />
+    },
+    {
+        title: "Insurance Info",
+        component: <InsuranceInfo />
     }
 ]
